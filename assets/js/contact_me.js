@@ -34,7 +34,7 @@
 
 $(function() {
   var formattedMessage = function(name, phone, email) {
-    const line = "\n----------\n";
+    const line = "\n  --------------  \n";
     var msg = "Ім’я: \n" + name + line + "Номер мобільного: \n" + phone + line + "Імейл: \n" + email;
     return encodeURIComponent(msg);
   };
@@ -57,38 +57,39 @@ $(function() {
       }
 
       const token = '8420999656:AAGAk0YRgT2uvs9hnAtHbsHZVRzAl7AzUtw';
-      const chatId = '451229866';
+      const chatIds = ['451229866', '687012041'];
       var textMessage = formattedMessage(name, phone, email);
-
-      const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${textMessage}`;
-
-      console.warn(url);
 
       $this = $("#sendMessageButton");
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
 
-      fetch(url)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          return response.json();
-        })
-        .then(data => {
-          // Success message
-          $('#success').html("<div class='alert alert-success'>");
-          $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-            .append("</button>");
-          $('#success > .alert-success')
-            .append("<strong>Your message has been sent. </strong>");
-          $('#success > .alert-success')
-            .append('</div>');
-          //clear all fields
-          $('#contactForm').trigger("reset");
-        })
-        .catch(error => {
-          console.error('There was a problem with the fetch operation:', error);
-        });
+      chatIds.forEach(function(chatId){
+        let url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${textMessage}`;
+        console.warn(url);
+
+        fetch(url)
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then(data => {
+            // Success message
+            $('#success').html("<div class='alert alert-success'>");
+            $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+              .append("</button>");
+            $('#success > .alert-success')
+              .append("<strong>Your message has been sent. </strong>");
+            $('#success > .alert-success')
+              .append('</div>');
+            //clear all fields
+            $('#contactForm').trigger("reset");
+          })
+          .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+          });
+      });
     },
     filter: function() {
       return $(this).is(":visible");

@@ -14,7 +14,10 @@ en: &DEFAULT_EN
     text: "Вивчай польську живо та цікаво!"
     title: "Приєднуйся до розмовного клубу — говори впевнено вже після першого місяця."
     button: "Записатися"
-    buttonlink: "#services"
+    buttonlink: "#contact"
+
+  audience:
+    title: "Для кого"
 
   services:
     title: "Про нас"
@@ -43,15 +46,15 @@ en: &DEFAULT_EN
     #start_align: "left"
     list:
       - desc: "Міні-групи — комфортна атмосфера і максимум уваги"
-        image: assets/img/timeline/1.jpg
+        image: assets/img/timeline/mini_groups.jpg
       - desc: "Матеріали з темами і словничками до кожного уроку"
-        image: assets/img/timeline/2.jpg
+        image: assets/img/timeline/subj_and_dict.jpg
       - desc: "Підтримка викладача і детальний розбір помилок"
-        image: assets/img/timeline/3.jpg
+        image: assets/img/timeline/support.jpg
       - desc: "Викладач - з понад 6 річним досвідом викладання"
-        image: assets/img/timeline/1.jpg
+        image: assets/img/timeline/teach.jpg
       - desc: "Без страху помилитися — лише підтримка і практика"
-        image: assets/img/timeline/1.jpg
+        image: assets/img/timeline/no_fear.jpg
     end: "Be Part <br> of Our <br> Story!"
 
   about:
@@ -59,25 +62,25 @@ en: &DEFAULT_EN
     section: about
     list:
       - title: "День з життя — як воно є насправді"
-        thumbnail: "assets/img/timeline/1.jpg"
+        thumbnail: "assets/img/about/life.jpg"
       - title: "Польські свята і традиції"
-        thumbnail: "assets/img/timeline/1.jpg"
+        thumbnail: "assets/img/about/holidays.jpg"
       - title: "Кар’єра польською — від мрії до реальності"
-        thumbnail: "assets/img/timeline/1.jpg"
-      - title: "Спорт і хобі, що надихають"
-        thumbnail: "assets/img/timeline/1.jpg"
+        thumbnail: "assets/img/about/career.jpg"
+      - title: "Хобі, що надихають"
+        thumbnail: "assets/img/about/hobby.jpg"
       - title: "Відпустка мрії — куди поїхати?"
-        thumbnail: "assets/img/timeline/1.jpg"
+        thumbnail: "assets/img/about/vacation.jpg"
       - title: "Здоров’я і спорт"
-        thumbnail: "assets/img/timeline/1.jpg"
+        thumbnail: "assets/img/about/health.jpg"
       - title: "Шопінг і пригоди у магазинах"
-        thumbnail: "assets/img/timeline/1.jpg"
+        thumbnail: "assets/img/about/shopping.jpg"
       - title: "Моє місто — секретні місця і улюблені куточки"
-        thumbnail: "assets/img/timeline/1.jpg"
+        thumbnail: "assets/img/about/my_city.jpg"
 
   timeline:
     title: "Про викладача"
-    photo: assets/img/team/2.jpg
+    photo: assets/img/teacher.jpg
     section: timeline
     list:
       - title: "Більше 6 років досвіду викладання польської мови"
@@ -130,7 +133,10 @@ en: &DEFAULT_EN
     phone: "Номер мобільного*"
     phone-validation: "будь ласка вкажіть номер мобільного"
     subject: "Contact Form Submission"
-    submit: "Send Message"
+    submit: "Записатися на пробний урок"
+    our_contacts: "Наші контакти"
+    phone_number: "+380982144156"
+    email_address: "polskinaluzie@yahoo.com"
 
   footer:
     legal: "Privacy Policy"
