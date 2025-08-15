@@ -135,7 +135,7 @@ en: &DEFAULT_EN
     subject: "Contact Form Submission"
     submit: "Записатися на пробний урок"
     our_contacts: "Наші контакти"
-    phone_number: "+380982144156"
+    phone_number: "+380(98)214-41-56"
     email_address: "polskinaluzie@yahoo.com"
 
   footer:
